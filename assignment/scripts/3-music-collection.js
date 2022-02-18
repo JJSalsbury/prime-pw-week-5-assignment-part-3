@@ -32,3 +32,15 @@ function showCollection ( array ) {
   }
 }
 showCollection( collection );
+
+function findByArtist ( artist ) {
+  let artistName = [];
+  for (let i = 0; i < collection.length; i++) {
+    if (artist === collection[i].artist) {
+      artistName.push(collection[i]);
+    }
+  }
+  return artistName;
+}
+console.log(findByArtist('Otis Redding'));
+console.log(findByArtist('Ray Charles'));
